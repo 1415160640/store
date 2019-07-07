@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ 	    <!-- 建立类与表的标签 -->
+ 	    <class name="cn.store.domain.Category" table="category">
+ 	        <!-- 建立类中的属性和表的主键对应 -->
+ 	        <id name="cid" column="cid" >
+ 	            <!-- 本地策略 没有把表的主键设置为自增属性使用该策略 -->
+			    <generator class="assigned"/>
+		    </id>
+		    <!-- 建立类中普通属性和表的其他属性对应 -->
+		   <property name="cname" column="cname" length="20" />
+ 	    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ 	    <!-- 建立类与表的标签 -->
+ 	    <class name="cn.store.domain.User" table="user">
+ 	        <!-- 建立类中的属性和表的主键对应 -->
+ 	        <id name="uid" column="uid" >
+ 	            <!-- 本地策略 没有把表的主键设置为自增属性使用该策略 -->
+			    <generator class="assigned"/>
+		    </id>
+		    <!-- 建立类中普通属性和表的其他属性对应 -->
+		   <property name="username"/>
+		   <property name="password" />
+		   <property name="name"  />
+		   <property name="email"  />
+		   <property name="telephone"/>
+		   <property name="birthday" />
+		   <property name="sex" />
+		   <property name="state" />
+		   <property name="code" />
+ 	    </class>
+</hibernate-mapping>
